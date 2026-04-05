@@ -76,7 +76,7 @@
         
         <!-- Mobile Menu Button -->
         <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none p-2 hover:bg-gray-100 rounded-full transition-colors">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <i class="ph ph-list text-2xl" id="menu-icon"></i>
         </button>
       </div>
     </div>
@@ -85,17 +85,19 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-3xl z-40 hidden pt-28 px-6 overflow-y-auto w-full h-full">
     <div class="flex flex-col gap-6 text-xl font-medium text-center pb-12 w-full">
-      <a href="#hero" class="text-brand-purple p-3 rounded-2xl bg-brand-purple/5 block w-full">Início</a>
-      <a href="#a-sala" class="p-3 block w-full text-gray-800">A Sala</a>
-      <a href="#o-jogo" class="p-3 block w-full text-gray-800">O Jogo</a>
-      <a href="#para-quem" class="p-3 block w-full text-gray-800">Para Quem</a>
-      <a href="#futuro" class="p-3 block w-full text-gray-800">Futuro</a>
-      <a href="#faq" class="p-3 block w-full text-gray-800">FAQ</a>
-      <a href="#contato" class="p-3 block w-full text-gray-800">Contato</a>
+      <a href="index.html#hero" data-i18n="nav-inicio" class="text-brand-purple p-3 rounded-2xl bg-brand-purple/5 block w-full">Início</a>
+      <a href="sobre.html" data-i18n="nav-sobre" class="p-3 block w-full text-gray-800">Sobre Nós</a>
+      <a href="index.html#a-sala" data-i18n="nav-sala" class="p-3 block w-full text-gray-800">A Sala</a>
+      <a href="index.html#o-jogo" data-i18n="nav-jogo" class="p-3 block w-full text-gray-800">O Jogo</a>
+      <a href="index.html#para-quem" data-i18n="nav-para-quem" class="p-3 block w-full text-gray-800">Para Quem</a>
+      <a href="index.html#futuro" data-i18n="nav-futuro" class="p-3 block w-full text-gray-800">Futuro</a>
+      <a href="index.html#faq" data-i18n="nav-faq" class="p-3 block w-full text-gray-800">FAQ</a>
+      <a href="index.html#contato" data-i18n="nav-contato" class="p-3 block w-full text-gray-800">Contato</a>
       <hr class="border-gray-100 my-2 w-full">
       <div class="flex justify-center gap-4 py-2 w-full">
         <button onclick="changeLanguage('pt-br')" class="text-2xl px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-sm active:scale-95 transition-transform"><span class="mr-1">🇧🇷</span> BR</button>
         <button onclick="changeLanguage('pt-pt')" class="text-2xl px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-sm active:scale-95 transition-transform"><span class="mr-1">🇵🇹</span> PT</button>
+        <button onclick="changeLanguage('en-us')" class="text-2xl px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-sm active:scale-95 transition-transform"><span class="mr-1">🇺🇸</span> EN</button>
       </div>
     </div>
   </div>

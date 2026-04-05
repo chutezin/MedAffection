@@ -464,9 +464,26 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  
   if(menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    menuToggle.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if(menuIcon) {
+        if(isHidden) {
+          menuIcon.classList.replace('ph-x', 'ph-list');
+        } else {
+          menuIcon.classList.replace('ph-list', 'ph-x');
+        }
+      }
+    });
+    
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        if(menuIcon) menuIcon.classList.replace('ph-x', 'ph-list');
+      });
+    });
   }
 
   const setHeaderState = () => {
