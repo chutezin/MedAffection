@@ -361,25 +361,22 @@ window.changeLanguage = function(lang) {
 window.selectForm = function(tipo) {
   const invForm = document.getElementById('investidor-form');
   const hosForm = document.getElementById('hospital-form');
-  
   const btnInv = document.getElementById('btn-select-investidor');
   const btnHos = document.getElementById('btn-select-hospital');
   
-  if(invForm && hosForm) {
+  if(invForm && hosForm && btnInv && btnHos) {
     if(tipo === 'investidor') {
       invForm.classList.remove('hidden');
       hosForm.classList.add('hidden');
-      btnInv.classList.replace('bg-white', 'bg-brand-purple');
-      btnInv.classList.replace('text-brand-purple', 'text-white');
-      btnHos.classList.replace('bg-brand-purple', 'bg-white');
-      btnHos.classList.replace('text-white', 'text-brand-purple');
+      
+      btnInv.className = "bg-brand-purple text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md";
+      btnHos.className = "bg-transparent hover:bg-white text-gray-500 hover:text-gray-900 hover:shadow-sm px-8 py-3 rounded-xl font-bold transition-all";
     } else {
       hosForm.classList.remove('hidden');
       invForm.classList.add('hidden');
-      btnHos.classList.replace('bg-white', 'bg-brand-purple');
-      btnHos.classList.replace('text-brand-purple', 'text-white');
-      btnInv.classList.replace('bg-brand-purple', 'bg-white');
-      btnInv.classList.replace('text-white', 'text-brand-purple');
+      
+      btnHos.className = "bg-brand-purple text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md";
+      btnInv.className = "bg-transparent hover:bg-white text-gray-500 hover:text-gray-900 hover:shadow-sm px-8 py-3 rounded-xl font-bold transition-all";
     }
   }
 };
