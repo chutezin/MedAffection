@@ -411,7 +411,7 @@
             <i class="ph-duotone ph-bank"></i>
           </div>
           
-          <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="supp-rouanet-t">Incentivo Fiscal (PRONAC)</h3>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="supp-rouanet-t">Incentivo Fiscal (Lei de Incentivo à Cultura)</h3>
           <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="supp-rouanet-p">Direcione parte do seu Imposto de Renda para o nosso projeto cultural. Válido apenas para o Brasil.</p>
 
           <div class="grid sm:grid-cols-2 gap-4 mb-8">
@@ -425,15 +425,40 @@
             </div>
           </div>
 
-          <div class="space-y-3 bg-gray-50 p-6 rounded-3xl border border-gray-100">
-            <h4 class="font-bold text-gray-900 mb-4 text-center border-b border-gray-200 pb-2" data-i18n="supp-bank-t">Dados para Depósito</h4>
-            <div class="flex justify-between text-sm"><span class="text-gray-400 font-medium" data-i18n="supp-bank-banco">Banco</span> <span class="font-bold text-gray-700">Banco do Brasil - 001</span></div>
-            <div class="flex justify-between text-sm"><span class="text-gray-400 font-medium" data-i18n="supp-bank-agen">Agência</span> <span class="font-bold text-gray-700">2814-2</span></div>
-            <div class="flex justify-between text-sm"><span class="text-gray-400 font-medium" data-i18n="supp-bank-conta">Conta</span> <span class="font-bold text-gray-700">69.464-9</span></div>
-            <div class="flex justify-between text-sm"><span class="text-gray-400 font-medium" data-i18n="supp-bank-pronac">PRONAC</span> <span class="font-bold text-brand-purple">260346</span></div>
+          <div class="space-y-3 bg-gray-50 p-6 rounded-3xl border border-gray-100 mb-6">
+            <h4 class="font-bold text-gray-900 mb-4 text-center border-b border-gray-200 pb-2" data-i18n="supp-bank-t">Dados do Projeto</h4>
+            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-banco">Banco</span> <span class="font-bold text-gray-700">Banco do Brasil - 001</span></div>
+            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-agen">Agência</span> <span class="font-bold text-gray-700">2814-2</span></div>
+            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-conta">Conta</span> <span class="font-bold text-gray-700">69.464-9</span></div>
+            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0">
+              <span class="text-gray-400 font-medium" data-i18n="supp-bank-pronac">PRONAC</span> 
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-brand-purple">260346</span>
+                <button onclick="copyPronac()" class="p-1 hover:text-brand-purple transition-colors" title="Copiar PRONAC">
+                  <i class="ph ph-copy text-sm"></i>
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-portaria">Portaria</span> <span class="font-bold text-gray-700 text-[10px] sm:text-xs">SEFIC/MINC Nº 96, 20/02/26</span></div>
+            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-valor">Valor Aprovado</span> <span class="font-bold text-brand-green">R$ 1.026.575,00</span></div>
+          </div>
+
+          <a href="https://versalic.cultura.gov.br/#/projetos/260346" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-purple/10 text-brand-purple hover:bg-brand-purple hover:text-white py-3 rounded-2xl font-bold text-sm transition-all flex items-center justify-center gap-2 mb-6 border border-brand-purple/20">
+            <span data-i18n="supp-bank-dou-btn">Consultar no Portal Versalic</span> <i class="ph ph-arrow-square-out font-bold"></i>
+          </a>
+          
+          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 py-4 border-t border-gray-100">
+            <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
+              <i class="ph-fill ph-check-circle text-brand-green text-lg"></i>
+              <span data-i18n="supp-bank-art18">Projeto enquadrado no Artigo 18</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
+              <i class="ph-fill ph-check-circle text-brand-green text-lg"></i>
+              <span data-i18n="supp-bank-deducao">Dedução de 100% (IR)</span>
+            </div>
           </div>
           
-          <p class="mt-6 text-[10px] text-gray-400 font-medium italic text-center" data-i18n="supp-brazil-only">* Este incentivo fiscal aplica-se exclusivamente a contribuintes no Brasil.</p>
+          <p class="mt-4 text-[10px] text-gray-400 font-medium italic text-center" data-i18n="supp-brazil-only">* Este incentivo fiscal aplica-se exclusivamente a contribuintes no Brasil.</p>
         </div>
 
       </div>

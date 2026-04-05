@@ -88,19 +88,23 @@ const translations = {
     'supp-pix-key': '52.911.460/0001-75',
     'supp-pix-btn': 'Copiar Chave PIX',
 
-    'supp-rouanet-t': 'Incentivo Fiscal (PRONAC)',
+    'supp-rouanet-t': 'Incentivo Fiscal (Lei de Incentivo à Cultura)',
     'supp-rouanet-p': 'Direcione parte do seu Imposto de Renda para o nosso projeto cultural. Válido apenas para o Brasil.',
     'supp-rouanet-corp-t': 'Para Empresas',
     'supp-rouanet-corp-p': 'Dedução de até 4% do IR devido (Lucro Real).',
     'supp-rouanet-indiv-t': 'Para Pessoas Físicas',
     'supp-rouanet-indiv-p': 'Dedução de até 6% do IR devido (Declaração Completa).',
     
-    'supp-bank-t': 'Dados para Depósito (Brasil)',
-    'supp-bank-banco': 'Banco: Banco do Brasil - 001',
-    'supp-bank-agen': 'Agência: 2814-2',
-    'supp-bank-conta': 'Conta: 69.464-9',
-    'supp-bank-pronac': 'PRONAC: 260346',
-    'supp-bank-portaria': 'Portaria: SEFIC/MINC Nº 96, 20/02/26',
+    'supp-bank-t': 'Dados do Projeto',
+    'supp-bank-banco': 'Banco',
+    'supp-bank-agen': 'Agência',
+    'supp-bank-conta': 'Conta',
+    'supp-bank-pronac': 'PRONAC',
+    'supp-bank-portaria': 'Portaria',
+    'supp-bank-valor': 'Valor Aprovado',
+    'supp-bank-dou-btn': 'Acessar no Portal Versalic',
+    'supp-bank-art18': 'Projeto enquadrado no Artigo 18',
+    'supp-bank-deducao': 'Dedução de 100% do imposto de renda',
     
     'supp-brazil-only': '* Este incentivo fiscal aplica-se exclusivamente a contribuintes no Brasil.'
   },
@@ -294,21 +298,24 @@ const translations = {
     'supp-pix-key': '52.911.460/0001-75',
     'supp-pix-btn': 'Copy PIX Key',
 
-    'supp-rouanet-t': 'Tax Incentive (Brazil)',
-    'supp-rouanet-p': 'Exclusive mechanism for Brazilian taxpayers (Lei Rouanet).',
-    'supp-rouanet-corp-t': 'For Companies (BR)',
-    'supp-rouanet-corp-p': 'Deduction of up to 4% of due tax (Lucro Real).',
-    'supp-rouanet-indiv-t': 'For Individuals (BR)',
-    'supp-rouanet-indiv-p': 'Deduction of up to 6% of due tax (Complete Declaration).',
+    'supp-rouanet-t': 'Fiscal Incentive (Cultural Incentive Law)',
+    'supp-rouanet-p': 'Redirect part of your Income Tax to our cultural project. Valid only for Brazil.',
+    'supp-rouanet-corp-t': 'For Companies',
+    'supp-rouanet-corp-p': 'Deduction of up to 4% of Income Tax (Real Profit).',
+    'supp-rouanet-indiv-t': 'For Individuals',
+    'supp-rouanet-indiv-p': 'Deduction of up to 6% of Income Tax (Complete Declaration).',
     
-    'supp-bank-t': 'Bank Details (PRONAC Brazil)',
-    'supp-bank-banco': 'Bank: Banco do Brasil - 001',
-    'supp-bank-agen': 'Branch: 2814-2',
-    'supp-bank-conta': 'Account: 69.464-9',
-    'supp-bank-pronac': 'PRONAC: 260346',
-    'supp-bank-portaria': 'Ordinance: SEFIC/MINC Nº 96, 20/02/26',
-    
-    'supp-brazil-only': '* This tax incentive is exclusively for taxpayers in Brazil.'
+    'supp-bank-t': 'Project Details',
+    'supp-bank-banco': 'Bank',
+    'supp-bank-agen': 'Agency',
+    'supp-bank-conta': 'Account',
+    'supp-bank-pronac': 'PRONAC',
+    'supp-bank-portaria': 'Decree',
+    'supp-bank-valor': 'Approved Value',
+    'supp-bank-dou-btn': 'Consult on Versalic Portal',
+    'supp-bank-art18': 'Project under Article 18',
+    'supp-bank-deducao': '100% Tax Deduction',
+    'supp-brazil-only': '* This fiscal incentive applies exclusively to taxpayers in Brazil.'
   }
 };
 
@@ -432,6 +439,27 @@ window.copyPixKey = function() {
       if(icon) icon.classList.replace('opacity-100', 'opacity-0');
       btn.innerText = originalText;
       btn.appendChild(icon);
+    }, 2000);
+  });
+};
+
+window.copyPronac = function() {
+  const pronac = "260346";
+  navigator.clipboard.writeText(pronac).then(() => {
+    const btn = document.querySelector('[onclick="copyPronac()"]');
+    const icon = btn.querySelector('.ph-check');
+    const originalIconClass = 'ph-copy';
+    
+    if(icon) {
+      icon.classList.replace('ph-copy', 'ph-check');
+      icon.classList.add('text-brand-green');
+    }
+    
+    setTimeout(() => {
+      if(icon) {
+        icon.classList.replace('ph-check', 'ph-copy');
+        icon.classList.remove('text-brand-green');
+      }
     }, 2000);
   });
 };
