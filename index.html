@@ -1,19 +1,14 @@
 <html lang="pt-br">
-<!--
-* PyWebCopy Engine [version 7.1]
-* Copyright 2020; Raja Tomar
-* File mirrored from [https://medaffection.com/]
-* At UTC datetime: [2026-03-22 15:09:56.300061]
--->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MedAffection - Sala Pirata das Estrelas</title>
+  <title>MedAffection - Humanizando o Cuidado com Tecnologia</title>
+  <meta name="description" content="MedAffection transforma o ambiente hospitalar pediátrico em uma jornada de descobertas através de tecnologia 3D, games e interatividade.">
+  
   <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="./fonts.googleapis.com/index.html">
-  <link rel="preconnect" href="./fonts.gstatic.com/index.html">
-  <link href="./fonts.googleapis.com/css2_family_Poppins_wght_400_600_700_display_swap.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="preload" href="assets/sala-piratas-1.webp" as="image">
@@ -36,6 +31,7 @@
         <nav class="hidden md:flex gap-3 lg:gap-6 items-center font-medium text-sm lg:text-base">
           <a href="index.html#hero" data-i18n="nav-inicio" class="text-brand-purple hover:text-brand-purple/80 hover:-translate-y-0.5 transition-all">Início</a>
           <a href="sobre.html" data-i18n="nav-sobre" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700 whitespace-nowrap">Sobre Nós</a>
+          <a href="doe.html" data-i18n="nav-doe" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700">Doar</a>
           <a href="index.html#para-quem" data-i18n="nav-para-quem" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700 whitespace-nowrap">Para Quem</a>
           <a href="index.html#futuro" data-i18n="nav-futuro" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700">Futuro</a>
           <a href="index.html#faq" data-i18n="nav-faq" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700">FAQ</a>
@@ -87,6 +83,7 @@
     <div class="flex flex-col gap-6 text-xl font-medium text-center pb-12 w-full">
       <a href="index.html#hero" data-i18n="nav-inicio" class="text-brand-purple p-3 rounded-2xl bg-brand-purple/5 block w-full">Início</a>
       <a href="sobre.html" data-i18n="nav-sobre" class="p-3 block w-full text-gray-800">Sobre Nós</a>
+      <a href="doe.html" data-i18n="nav-doe" class="p-3 block w-full text-gray-800">Doar</a>
       <a href="index.html#a-sala" data-i18n="nav-sala" class="p-3 block w-full text-gray-800">A Sala</a>
       <a href="index.html#o-jogo" data-i18n="nav-jogo" class="p-3 block w-full text-gray-800">O Jogo</a>
       <a href="index.html#para-quem" data-i18n="nav-para-quem" class="p-3 block w-full text-gray-800">Para Quem</a>
@@ -121,8 +118,7 @@
     <div class="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center mt-8">
       
       <!-- Left Column: Copy & CTAs -->
-      <div class="flex flex-col items-start text-left animate-slide-in-right opacity-0" style="animation-delay: 0.1s;">
-        
+      <div class="flex flex-col items-start text-left">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-sm border border-gray-100 text-brand-green font-bold tracking-wide uppercase mb-6 hover:scale-105 transition-transform cursor-pointer text-xs sm:text-sm">
           <i class="ph-fill ph-check-circle animate-pulse"></i>
           Transformando o Cuidar
@@ -140,8 +136,8 @@
         <div class="flex flex-wrap gap-4 items-center">
           <div class="relative group">
             <div class="absolute -inset-1 bg-brand-coral rounded-full blur-md opacity-40 group-hover:opacity-70 transition duration-500"></div>
-            <a href="#contato" class="relative inline-flex items-center gap-2 bg-brand-coral text-white font-bold px-8 py-4 rounded-full text-lg shadow-[0_10px_20px_-5px_rgba(255,82,82,0.5)] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300">
-              <span data-i18n="hero-btn">Junte-se a nós</span> <i class="ph-bold ph-arrow-right"></i>
+            <a href="doe.html" class="relative inline-flex items-center gap-2 bg-brand-coral text-white font-bold px-8 py-4 rounded-full text-lg shadow-[0_10px_20px_-5px_rgba(255,82,82,0.5)] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300">
+              <span data-i18n="hero-btn">Junte-se a nós</span> <i class="ph-bold ph-heart"></i>
             </a>
           </div>
           
@@ -151,45 +147,24 @@
         </div>
       </div>
 
-      <!-- Right Column: 3D Character Display -->
-      <div class="relative hidden lg:flex flex-col items-center justify-center min-h-[500px] animate-fade-in-up opacity-0" style="animation-delay: 0.3s;">
+      <!-- Right Column: 3D Mascot & Trailer -->
+      <div class="relative hidden lg:flex items-center justify-center min-h-[500px]">
+        <!-- Mascot Floating Independent -->
+        <img src="assets/char-brave-v2.png" alt="Mascote" class="absolute -top-10 -left-20 z-30 w-72 h-auto drop-shadow-2xl animate-float pointer-events-none">
         
-        <!-- Glowing Aura / Pedestal for 3D Model -->
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="w-[80%] h-[80%] bg-gradient-to-b from-brand-purple/20 to-brand-green/20 rounded-full blur-3xl animate-pulse-soft"></div>
-        </div>
-
-        <!-- Immersive Media Composition (Isolated Video Layer) -->
-        <div class="relative z-10 w-full max-w-lg min-h-[400px] animate-float flex items-center justify-center group mt-10 lg:mt-0 xl:ml-10">
-          
-          <!-- 3D Character Layer Floating Independently -->
-          <img src="assets/char-brave-v2.png" alt="Mascote Pirata das Estrelas" class="absolute -top-32 -left-16 z-50 w-64 md:w-80 h-auto drop-shadow-[0_20px_50px_rgba(94,53,177,0.4)] animate-float object-contain hover:scale-110 hover:-rotate-3 transition-transform duration-700 pointer-events-auto">
-
-          <!-- Backing glow -->
-          <div class="absolute inset-0 bg-gradient-to-br from-brand-purple/40 to-brand-coral/40 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700 z-0"></div>
-
-          <!-- Main Trailer Video Card -->
-          <div class="relative z-20 w-full aspect-[4/5] md:aspect-square bg-black rounded-4xl overflow-hidden shadow-[0_20px_50px_rgba(94,53,177,0.3)] border border-white/20 group-hover:shadow-[0_40px_80px_rgba(94,53,177,0.5)] transition-all duration-700 cursor-pointer">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 scale-105 group-hover:scale-100">
-              <source src="assets/trailer-piratas-1.mp4" type="video/mp4">
-            </video>
-
-            <!-- Video Overlay UI -->
-            <div class="absolute inset-0 z-40 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 pointer-events-none">
-              <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/50 flex items-center justify-center text-white scale-90 group-hover:scale-110 transition-transform duration-500 shadow-xl mb-4 self-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-overlay">
-                <i class="ph-fill ph-play text-2xl"></i>
-              </div>
-              <h3 class="text-white font-bold text-lg drop-shadow-md">Trailer Oficial</h3>
-              <p class="text-white/80 text-sm font-medium drop-shadow-md">Sala Piratas das Estrelas</p>
+        <!-- Video Card -->
+        <div class="relative z-20 w-full max-w-md aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/50 group cursor-pointer transition-transform duration-500 hover:scale-[1.02]">
+          <video autoplay loop muted playsinline class="w-full h-full object-cover">
+            <source src="assets/trailer-piratas-1.mp4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white mb-4 self-center group-hover:scale-110 transition-transform">
+              <i class="ph-fill ph-play text-2xl"></i>
             </div>
-          </div>
-          
-          <!-- Fancy Label -->
-          <div class="absolute z-50 -bottom-5 px-6 py-2 bg-white/90 backdrop-blur-xl text-brand-purple text-sm font-bold rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] uppercase tracking-widest flex items-center gap-2 border border-white/40 transform hover:-translate-y-1 transition-all duration-500 cursor-default">
-            <i class="ph-fill ph-shooting-star text-brand-coral animate-pulse-soft"></i> Próxima Geração
+            <span class="text-white font-bold text-xl">Sala Pirata das Estrelas</span>
+            <span class="text-white/70 text-sm">Assista ao Trailer</span>
           </div>
         </div>
-        
       </div>
 
     </div>
@@ -371,96 +346,64 @@
     </div>
   </section>
 
-  <!-- Support / Donation Section -->
-  <section id="apoie" class="py-24 md:py-32 px-6 sm:px-8 relative overflow-hidden bg-white">
-    <div class="absolute top-0 right-0 w-[50%] h-[50%] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <!-- Support Gateway Section (Irmã Dulce Style) -->
+  <section id="apoie" class="py-24 md:py-32 px-6 bg-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-nearo text-4xl md:text-5xl font-extrabold text-gray-900 mb-6" data-i18n="supp-h2">Apoie o Projeto</h2>
-        <p class="text-lg md:text-xl text-gray-600 font-medium" data-i18n="supp-p">Ajude-nos a levar a Sala Pirata das Estrelas para mais hospitais em todo o Brasil. Você pode contribuir via PIX ou através do incentivo fiscal da Lei Rouanet.</p>
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="font-nearo text-4xl md:text-6xl font-extrabold text-gray-900 mb-6" data-i18n="supp-h2">Apoie esta Jornada</h2>
+        <p class="text-xl text-gray-600 mb-10" data-i18n="supp-p">Sua contribuição transforma medo em coragem. Escolha a melhor forma de apoiar a Sala Pirata das Estrelas.</p>
+        
+        <!-- Impact/Transparency Bar -->
+        <div class="inline-flex flex-wrap justify-center gap-8 p-6 bg-brand-purple/5 rounded-3xl border border-brand-purple/10">
+          <div class="text-center">
+            <span class="block text-2xl font-bold text-brand-purple">R$ 1.026.575</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Valor Aprovado (PRONAC)</span>
+          </div>
+          <div class="w-px h-12 bg-gray-200 hidden md:block"></div>
+          <div class="text-center">
+            <span class="block text-2xl font-bold text-brand-green">1ª Sala</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Meta de Implementação</span>
+          </div>
+        </div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-        
-        <!-- PIX Donation Card -->
-        <div class="bg-[#F8F9FA] p-8 md:p-10 rounded-4xl border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(94,53,177,0.1)] transition-all duration-500 group">
-          <div class="w-16 h-16 rounded-2xl bg-[#32BCAD]/10 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform duration-500">
-            <img src="https://img.icons8.com/color/512/pix.png" alt="Pix Logo" class="w-12 h-12 object-contain">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Path 1: Direct -->
+        <div class="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-brand-purple/20 transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-[#32BCAD]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <img src="https://img.icons8.com/color/512/pix.png" alt="Pix" class="w-8 h-8">
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="supp-pix-t">Doação via PIX</h3>
-          <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="supp-pix-p">Contribua de forma rápida e direta para a manutenção e expansão de nossas atividades.</p>
-          
-          <div class="bg-white p-6 rounded-3xl border border-gray-100 mb-8 relative">
-            <span class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Chave PIX</span>
-            <code class="block text-lg font-bold text-brand-purple select-all" id="pix-key" data-i18n="supp-pix-key">contato@medaffection.com</code>
-            <button onclick="copyPixKey()" class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-brand-purple/5 text-brand-purple hover:bg-brand-purple hover:text-white transition-all flex items-center justify-center shadow-sm">
-              <i class="ph-bold ph-copy"></i>
-            </button>
-          </div>
-
-          <button onclick="copyPixKey()" class="w-full bg-gray-900 text-white hover:bg-brand-purple py-4 rounded-2xl font-bold text-lg transition-all shadow-lg flex items-center justify-center gap-2" data-i18n-btn="supp-pix-btn">
-            Copiar Chave PIX <i class="ph-bold ph-check-circle opacity-0 transition-opacity"></i>
+          <h3 class="text-2xl font-bold mb-4" data-i18n="supp-pix-t">Doação Direta (PIX)</h3>
+          <p class="text-gray-600 mb-8 text-sm leading-relaxed" data-i18n="supp-pix-p">Rapidez e impacto imediato na manutenção de nossas atividades.</p>
+          <button onclick="copyPixKey()" class="w-full py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-brand-purple transition-all flex items-center justify-center gap-2">
+            <span data-i18n-btn="supp-pix-btn">Copiar Chave</span> <i class="ph-bold ph-copy"></i>
           </button>
         </div>
 
-        <!-- Lei Rouanet Card -->
-        <div class="bg-white p-8 md:p-10 rounded-4xl border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(94,53,177,0.1)] transition-all duration-500 relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/10 rounded-full blur-[40px] -mr-16 -mt-16"></div>
-          
-          <div class="w-16 h-16 rounded-2xl bg-brand-purple/10 text-brand-purple flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform duration-500">
-            <i class="ph-duotone ph-bank"></i>
+        <!-- Path 2: IR (Star of the section) -->
+        <div class="p-8 rounded-[2.5rem] bg-brand-purple text-white shadow-2xl shadow-brand-purple/20 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-4 opacity-10">
+            <i class="ph-fill ph-shooting-star text-9xl"></i>
           </div>
-          
-          <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="supp-rouanet-t">Incentivo Fiscal (Lei de Incentivo à Cultura)</h3>
-          <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="supp-rouanet-p">Direcione parte do seu Imposto de Renda para o nosso projeto cultural. Válido apenas para o Brasil.</p>
-
-          <div class="grid sm:grid-cols-2 gap-4 mb-8">
-            <div class="p-4 bg-brand-purple/5 rounded-2xl border border-brand-purple/10">
-              <h4 class="font-bold text-brand-purple mb-1 text-sm" data-i18n="supp-rouanet-corp-t">Para Empresas</h4>
-              <p class="text-xs text-gray-600 font-medium" data-i18n="supp-rouanet-corp-p">Dedução de até 4% do IR devido (Lucro Real).</p>
-            </div>
-            <div class="p-4 bg-brand-green/5 rounded-2xl border border-brand-green/10">
-              <h4 class="font-bold text-brand-green mb-1 text-sm" data-i18n="supp-rouanet-indiv-t">Para Pessoas Físicas</h4>
-              <p class="text-xs text-gray-600 font-medium" data-i18n="supp-rouanet-indiv-p">Dedução de até 6% do IR devido (Declaração Completa).</p>
-            </div>
-          </div>
-
-          <div class="space-y-3 bg-gray-50 p-6 rounded-3xl border border-gray-100 mb-6">
-            <h4 class="font-bold text-gray-900 mb-4 text-center border-b border-gray-200 pb-2" data-i18n="supp-bank-t">Dados do Projeto</h4>
-            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-banco">Banco</span> <span class="font-bold text-gray-700">Banco do Brasil - 001</span></div>
-            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-agen">Agência</span> <span class="font-bold text-gray-700">2814-2</span></div>
-            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-conta">Conta</span> <span class="font-bold text-gray-700">69.464-9</span></div>
-            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0">
-              <span class="text-gray-400 font-medium" data-i18n="supp-bank-pronac">PRONAC</span> 
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-brand-purple">260346</span>
-                <button onclick="copyPronac()" class="p-1 hover:text-brand-purple transition-colors" title="Copiar PRONAC">
-                  <i class="ph ph-copy text-sm"></i>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-portaria">Portaria</span> <span class="font-bold text-gray-700 text-[10px] sm:text-xs">SEFIC/MINC Nº 96, 20/02/26</span></div>
-            <div class="flex justify-between text-sm items-center py-1 border-b border-gray-100 last:border-0"><span class="text-gray-400 font-medium" data-i18n="supp-bank-valor">Valor Aprovado</span> <span class="font-bold text-brand-green">R$ 1.026.575,00</span></div>
-          </div>
-
-          <a href="https://versalic.cultura.gov.br/#/projetos/260346" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-purple/10 text-brand-purple hover:bg-brand-purple hover:text-white py-3 rounded-2xl font-bold text-sm transition-all flex items-center justify-center gap-2 mb-6 border border-brand-purple/20">
-            <span data-i18n="supp-bank-dou-btn">Consultar no Portal Versalic</span> <i class="ph ph-arrow-square-out font-bold"></i>
+          <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 font-bold">IR</div>
+          <h3 class="text-2xl font-bold mb-4" data-i18n="supp-rouanet-t">Incentivo Fiscal (Rouanet)</h3>
+          <p class="text-white/80 mb-8 text-sm leading-relaxed" data-i18n="supp-rouanet-p">Transforme seu imposto em cura. Sem custos extras para você ou sua empresa.</p>
+          <a href="doe.html" class="w-full py-4 bg-white text-brand-purple rounded-2xl font-bold hover:bg-brand-coral hover:text-white transition-all flex items-center justify-center gap-2">
+            <span>Saber Mais</span> <i class="ph-bold ph-arrow-right"></i>
           </a>
-          
-          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 py-4 border-t border-gray-100">
-            <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
-              <i class="ph-fill ph-check-circle text-brand-green text-lg"></i>
-              <span data-i18n="supp-bank-art18">Projeto enquadrado no Artigo 18</span>
-            </div>
-            <div class="flex items-center gap-2 text-xs font-bold text-gray-600">
-              <i class="ph-fill ph-check-circle text-brand-green text-lg"></i>
-              <span data-i18n="supp-bank-deducao">Dedução de 100% (IR)</span>
-            </div>
-          </div>
-          
-          <p class="mt-4 text-[10px] text-gray-400 font-medium italic text-center" data-i18n="supp-brazil-only">* Este incentivo fiscal aplica-se exclusivamente a contribuintes no Brasil.</p>
         </div>
 
+        <!-- Path 3: Hospital -->
+        <div class="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-brand-purple/20 transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-green/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="ph-fill ph-hospital text-brand-green text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4" data-i18n="cont-b2">Para seu Hospital</h3>
+          <p class="text-gray-600 mb-8 text-sm leading-relaxed">Leve a Sala Pirata das Estrelas para sua instituição hospitalar.</p>
+          <a href="#contato" class="w-full py-4 bg-transparent border-2 border-gray-900 text-gray-900 rounded-2xl font-bold hover:bg-gray-900 hover:text-white transition-all flex items-center justify-center gap-2">
+            <span>Falar com a Equipe</span> <i class="ph-bold ph-chat-centered-text"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -578,33 +521,24 @@
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer class="bg-gray-950 text-white/80 py-16 px-6 relative border-t border-white/5 overflow-hidden">
-    <div class="absolute inset-0 bg-black mix-blend-overlay opacity-5 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-purple/20 rounded-t-full blur-[120px] pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-sm relative z-10">
-      <div class="flex flex-col gap-4">
-        <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">MedAffection</h4>
-        <p class="text-white/60 leading-relaxed max-w-sm" data-i18n="foot-desc">Transformando o tratamento do câncer infantil com empatia, tecnologia e imaginação.</p>
+  <!-- Floating CTA Bar -->
+  <div id="floating-cta" class="fixed bottom-6 left-6 right-6 z-50 transition-all duration-500 transform translate-y-20 opacity-0 pointer-events-none md:left-auto md:right-8 md:bottom-8 md:w-auto">
+    <div class="bg-white/90 backdrop-blur-2xl border border-white/50 shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-2 rounded-3xl flex items-center gap-4 pointer-events-auto">
+      <div class="hidden lg:flex items-center gap-3 px-4 border-r border-gray-100">
+        <div class="w-10 h-10 rounded-2xl bg-brand-purple/10 flex items-center justify-center">
+          <i class="ph-fill ph-shooting-star text-brand-purple animate-pulse-soft"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Nos ajude a construir</span>
+          <span class="text-sm font-bold text-gray-900 leading-none">Cuidado com Amor</span>
+        </div>
       </div>
-      <div class="flex flex-col gap-4">
-        <h4 class="text-lg font-bold text-white mb-2">Contato</h4>
-        <a href="mailto:contato@medaffection.com" class="hover:text-white transition-colors flex items-center gap-2 text-white/60 mb-1"><i class="ph-bold ph-envelope-simple text-brand-coral"></i> contato@medaffection.com</a>
-        <a href="https://www.instagram.com/medaffection_/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-purple transition-colors flex items-center gap-2 text-white/60"><i class="ph-bold ph-instagram-logo text-brand-purple"></i> @medaffection_</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h4 class="text-lg font-bold text-white mb-2" data-i18n="foot-links">Links rápidos</h4>
-        <ul class="space-y-3">
-          <li><a href="#a-sala" class="hover:text-brand-purple text-white/60 transition-colors flex items-center gap-1 group"><i class="ph-bold ph-caret-right text-brand-purple opacity-0 group-hover:opacity-100 -ml-4 group-hover:ml-0 transition-all"></i> <span data-i18n="nav-sala">A Sala</span></a></li>
-          <li><a href="#o-jogo" class="hover:text-brand-purple text-white/60 transition-colors flex items-center gap-1 group"><i class="ph-bold ph-caret-right text-brand-purple opacity-0 group-hover:opacity-100 -ml-4 group-hover:ml-0 transition-all"></i> <span data-i18n="nav-jogo">O Jogo</span></a></li>
-          <li><a href="#contato" class="hover:text-brand-purple text-white/60 transition-colors flex items-center gap-1 group"><i class="ph-bold ph-caret-right text-brand-purple opacity-0 group-hover:opacity-100 -ml-4 group-hover:ml-0 transition-all"></i> <span data-i18n="nav-contato">Contato</span></a></li>
-        </ul>
-      </div>
+      <a href="doe.html" class="bg-brand-coral text-white font-bold px-6 py-3 rounded-2xl hover:bg-brand-coral/90 hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
+        <span>Doar Agora</span> <i class="ph-bold ph-heart"></i>
+      </a>
     </div>
-    <div class="mt-16 pt-8 border-t border-white/10 text-center text-white/40 text-xs font-medium relative z-10 w-full flex flex-col items-center justify-center max-w-7xl mx-auto space-y-2">
-      <span class="opacity-75">&#169; 2025 MedAffection.</span> <span data-i18n="foot-rights" class="opacity-75">Todos os direitos reservados.</span>
-    </div>
-  </footer>
+  </div>
+
   <script type="module" src="/main.js"></script>
 </body>
 

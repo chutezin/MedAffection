@@ -1,0 +1,308 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doe - MedAffection | Transformando o Cuidado</title>
+  
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-[#F8F9FA] text-gray-800 font-sans antialiased scroll-smooth">
+  <!-- Header (Consistent with index.html) -->
+  <header id="site-header" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <div class="w-full max-w-[1240px] px-6 mx-auto">
+      <div id="header-inner" class="flex justify-between items-center bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-full px-8 py-4 transition-all duration-300">
+        <a href="index.html" class="flex-shrink-0 group flex items-center gap-2 text-brand-purple mr-2 lg:mr-8">
+          <svg viewBox="0 0 267 267" class="h-8 md:h-10 w-auto group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M163.469 49.0408C145.393 49.0408 130.74 63.9872 130.74 82.4246C130.74 83.9195 129.552 85.1314 128.086 85.1314C110.01 85.1314 95.3571 100.078 95.3571 118.515C95.3571 136.953 110.01 151.899 128.086 151.899C129.552 151.899 130.74 153.111 130.74 154.606C130.74 173.043 145.393 187.99 163.469 187.99C181.545 187.99 196.199 173.043 196.199 154.606C196.199 153.111 197.387 151.899 198.852 151.899C216.928 151.899 231.582 136.953 231.582 118.515C231.582 100.078 216.928 85.1314 198.852 85.1314C197.387 85.1314 196.199 83.9195 196.199 82.4246C196.199 63.9872 181.545 49.0408 163.469 49.0408Z" fill="currentColor" opacity="0.6"/>
+            <path d="M134.862 73.5612C117.148 73.5612 102.788 87.9215 102.788 105.636C102.788 107.072 101.623 108.236 100.187 108.236C82.4725 108.236 68.1122 122.597 68.1122 140.311C68.1122 158.026 82.4725 172.386 100.187 172.386C101.623 172.386 102.788 173.55 102.788 174.986C102.788 192.701 117.148 207.061 134.862 207.061C152.577 207.061 166.937 192.701 166.937 174.986C166.937 173.55 168.101 172.386 169.537 172.386C187.252 172.386 201.612 158.026 201.612 140.311C201.612 122.597 187.252 108.236 169.537 108.236C168.101 108.236 166.937 107.072 166.937 105.636C166.937 87.9215 152.577 73.5612 134.862 73.5612Z" fill="currentColor" opacity="0.8"/>
+            <path d="M106.255 92.6326C88.1792 92.6326 73.5259 107.286 73.5259 125.362C73.5259 126.827 72.3378 128.016 70.8722 128.016C52.7963 128.016 38.1429 142.669 38.1429 160.745C38.1429 178.821 52.7963 193.474 70.8722 193.474C72.3378 193.474 73.5259 194.662 73.5259 196.128C73.5259 214.204 88.1792 228.857 106.255 228.857C124.331 228.857 138.985 214.204 138.985 196.128C138.985 194.662 140.173 193.474 141.638 193.474C159.714 193.474 174.367 178.821 174.367 160.745C174.367 142.669 159.714 128.016 141.638 128.016C140.173 128.016 138.985 126.827 138.985 125.362C138.985 107.286 124.331 92.6326 106.255 92.6326Z" fill="currentColor"/>
+          </svg>
+          <span class="font-nearo font-bold text-xl md:text-2xl tracking-tight leading-none text-gray-900 mt-1">medaffection</span>
+        </a>
+        <nav class="hidden md:flex gap-3 lg:gap-6 items-center font-medium text-sm lg:text-base">
+          <a href="index.html#hero" data-i18n="nav-inicio" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700">Início</a>
+          <a href="sobre.html" data-i18n="nav-sobre" class="hover:text-brand-purple hover:-translate-y-0.5 transition-all text-gray-700 whitespace-nowrap">Sobre Nós</a>
+          <a href="doe.html" data-i18n="nav-doe" class="text-brand-purple font-bold hover:text-brand-purple/80 hover:-translate-y-0.5 transition-all">Doar</a>
+          
+          <!-- Premium Language Selector -->
+          <div class="relative group">
+            <button class="flex items-center gap-2 text-gray-700 hover:text-brand-purple transition-all font-semibold rounded-full py-1.5 px-3 hover:bg-brand-purple/5 border border-transparent hover:border-brand-purple/10">
+              <img id="current-lang-icon" src="https://flagcdn.com/w40/br.png" alt="BR" class="w-5 h-auto rounded-[3px] shadow-[0_2px_4px_rgba(0,0,0,0.1)]"> 
+              <span id="current-lang-text" class="text-sm">PT-BR</span>
+              <i class="ph-bold ph-caret-down text-[10px] group-hover:-rotate-180 transition-transform duration-300"></i>
+            </button>
+            <div class="absolute top-10 right-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top group-hover:translate-y-0 translate-y-2 z-50">
+              <div class="bg-white/90 backdrop-blur-2xl border border-white/50 shadow-[0_20px_40px_-10px_rgba(94,53,177,0.15)] rounded-3xl py-3 overflow-hidden">
+                <button onclick="changeLanguage('pt-br')" data-lang-btn="pt-br" data-lang-label="PT-BR" data-lang-flag="https://flagcdn.com/w40/br.png" class="w-full flex items-center gap-3 px-5 py-2.5 bg-brand-purple/5 text-brand-purple transition-colors relative">
+                  <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple rounded-r-md"></div>
+                  <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-6 h-auto rounded shadow-sm">
+                  <span class="text-sm font-bold">Português (BR)</span>
+                  <i class="ph-bold ph-check ml-auto text-brand-purple text-xs"></i>
+                </button>
+                <button onclick="changeLanguage('pt-pt')" data-lang-btn="pt-pt" data-lang-label="PT-PT" data-lang-flag="https://flagcdn.com/w40/pt.png" class="w-full flex items-center gap-3 px-5 py-2.5 hover:bg-gray-50 text-gray-600 hover:text-brand-purple transition-colors">
+                  <img src="https://flagcdn.com/w40/pt.png" alt="Portugal" class="w-6 h-auto rounded shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                  <span class="text-sm font-medium">Português (PT)</span>
+                </button>
+                <button onclick="changeLanguage('en-us')" data-lang-btn="en-us" data-lang-label="EN-US" data-lang-flag="https://flagcdn.com/w40/us.png" class="w-full flex items-center gap-3 px-5 py-2.5 hover:bg-gray-50 text-gray-600 hover:text-brand-purple transition-colors">
+                  <img src="https://flagcdn.com/w40/us.png" alt="USA" class="w-6 h-auto rounded shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                  <span class="text-sm font-medium">English (US)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#contato" class="px-5 py-2.5 bg-brand-purple text-white rounded-full hover:bg-brand-purple/90 hover:shadow-lg transition-all hover:-translate-y-0.5 font-bold ml-2 text-sm lg:text-base">Contato</a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none p-2 hover:bg-gray-100 rounded-full transition-colors">
+          <i class="ph ph-list text-2xl" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-3xl z-40 hidden pt-28 px-6 overflow-y-auto w-full h-full">
+    <div class="flex flex-col gap-6 text-xl font-medium text-center pb-12 w-full">
+      <a href="index.html#hero" data-i18n="nav-inicio" class="p-3 block w-full text-gray-800">Início</a>
+      <a href="sobre.html" data-i18n="nav-sobre" class="p-3 block w-full text-gray-800">Sobre Nós</a>
+      <a href="doe.html" data-i18n="nav-doe" class="text-brand-purple p-3 rounded-2xl bg-brand-purple/5 block w-full">Doar</a>
+      <a href="index.html#contato" data-i18n="nav-contato" class="p-3 block w-full text-gray-800">Contato</a>
+      <hr class="border-gray-100 my-2 w-full">
+      <div class="flex justify-center gap-4 py-2 w-full">
+        <button onclick="changeLanguage('pt-br')" class="text-2xl px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-sm active:scale-95 transition-transform"><span class="mr-1">🇧🇷</span> BR</button>
+        <button onclick="changeLanguage('pt-pt')" class="text-2xl px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-sm active:scale-95 transition-transform"><span class="mr-1">🇵🇹</span> PT</button>
+        <button onclick="changeLanguage('en-us')" class="text-2xl px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-sm active:scale-95 transition-transform"><span class="mr-1">🇺🇸</span> EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[70vh] flex items-center justify-center pt-32 pb-12 overflow-hidden px-6">
+    <div class="absolute inset-0 z-0 bg-gradient-to-tr from-brand-purple/10 to-brand-coral/5"></div>
+    <div class="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] bg-brand-purple/20 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="relative z-10 w-full max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-sm border border-gray-100 text-brand-purple font-bold tracking-wide uppercase mb-6 animate-fade-in-up">
+        <i class="ph-fill ph-heart animate-pulse text-brand-coral"></i>
+        <span data-i18n="doe-hero-tag">Sua Ajuda Transforma Vidas</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6 animate-fade-in-up" data-i18n="doe-hero-h1">
+        Transforme a cura em uma <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-coral">Jornada de Amor</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-in-up" data-i18n="doe-hero-p">
+        Cada contribuição ajuda a levar arte, games e humanização para crianças enfrentando o tratamento oncológico em todo o Brasil.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up">
+        <a href="#fluxo-doacao" class="bg-brand-purple text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:-translate-y-1 transition-all">Doar Agora</a>
+        <a href="#video-institucional" class="bg-white border-2 border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-full text-lg hover:border-gray-900 transition-all">Ver Nosso Impacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional Video Section -->
+  <section id="video-institucional" class="py-24 px-6 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative group">
+        <div class="absolute -inset-4 bg-gradient-to-br from-brand-purple/20 to-brand-coral/20 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-100 transition duration-700"></div>
+        <div class="relative z-10 aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20">
+          <video id="inst-video" class="w-full h-full object-cover">
+            <source src="assets/video-institucional.mp4" type="video/mp4">
+          </video>
+          <!-- Play Overlay -->
+          <div id="video-overlay" class="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer group-hover:bg-black/20 transition-all">
+            <div class="w-20 h-20 rounded-full bg-white/30 backdrop-blur-md border border-white/50 flex items-center justify-center text-white scale-100 group-hover:scale-110 transition-transform shadow-xl">
+              <i class="ph-fill ph-play text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-start gap-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-coral/10 text-brand-coral font-bold rounded-full text-sm">
+          <i class="ph-fill ph-star"></i> INSTITUCIONAL
+        </div>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight" data-i18n="doe-video-h2">
+          "Quando cada um faz um pouco, o pouco de muitos se soma."
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed font-medium" data-i18n="doe-video-p">
+          Assista ao nosso vídeo institucional e entenda como a MedAffection está transformando o ambiente hospitalar em um universo de possibilidades e esperança para as crianças.
+        </p>
+        <div class="flex gap-12 mt-4">
+          <div>
+            <span class="block text-3xl font-bold text-brand-purple">+500</span>
+            <span class="text-sm text-gray-500 font-bold uppercase tracking-wider">Crianças Impactadas</span>
+          </div>
+          <div>
+            <span class="block text-3xl font-bold text-brand-green">100%</span>
+            <span class="text-sm text-gray-500 font-bold uppercase tracking-wider">Amor em cada detalhe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Profiles -->
+  <section id="fluxo-doacao" class="py-24 px-6 bg-gray-50 relative">
+    <div class="max-w-7xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="doe-profiles-h2">Como você deseja ajudar?</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-i18n="doe-profiles-p">Escolha o perfil que melhor se adapta à sua vontade de transformar.</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <!-- Profile 1: Recurring -->
+      <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-gray-100 shadow-xl hover:-translate-y-2 transition-all group">
+        <div class="w-16 h-16 rounded-2xl bg-brand-purple/10 text-brand-purple flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
+          <i class="ph-bold ph-calendar-heart"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="doe-p1-h3">Mensageiro da Esperança</h3>
+        <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="doe-p1-p">Torne-se um doador mensal e garanta a continuidade de nossas atividades e expansão das salas.</p>
+        <a href="#apoie" class="block w-full text-center py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-brand-purple transition-colors">Apoiar mensalmente</a>
+      </div>
+
+      <!-- Profile 2: Corporate -->
+      <div class="bg-brand-purple p-8 md:p-10 rounded-[2.5rem] text-white shadow-2xl hover:-translate-y-2 transition-all relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+        <div class="w-16 h-16 rounded-2xl bg-white/20 text-white flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
+          <i class="ph-bold ph-buildings"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4" data-i18n="doe-p2-h3">Investimento Social</h3>
+        <p class="text-white/80 mb-8 font-medium leading-relaxed" data-i18n="doe-p2-p">Sua empresa pode patrocinar uma sala inteira via Lei de Incentivo à Cultura (Rouanet) com dedução fiscal.</p>
+        <a href="index.html#contato" class="block w-full text-center py-4 bg-white text-brand-purple rounded-2xl font-bold hover:bg-brand-coral hover:text-white transition-all">Saber mais</a>
+      </div>
+
+      <!-- Profile 3: Single -->
+      <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-gray-100 shadow-xl hover:-translate-y-2 transition-all group">
+        <div class="w-16 h-16 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
+          <i class="ph-bold ph-hand-heart"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="doe-p3-h3">Coração Generoso</h3>
+        <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="doe-p3-p">Faça uma doação única de qualquer valor e ajude-nos a comprar novos equipamentos e games.</p>
+        <a href="#apoie" class="block w-full text-center py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-brand-purple transition-colors">Doar agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section (PIX and Rouanet - Reused and Enhanced) -->
+  <section id="apoie" class="py-24 md:py-32 px-6 sm:px-8 relative overflow-hidden bg-white">
+    <div class="absolute top-0 right-0 w-[50%] h-[50%] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-nearo text-4xl md:text-5xl font-extrabold text-gray-900 mb-6" data-i18n="supp-h2">Canais de Apoio</h2>
+        <p class="text-lg md:text-xl text-gray-600 font-medium" data-i18n="supp-p">Escolha o método mais conveniente para você. Todas as doações são destinadas integralmente aos nossos projetos sociais.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <!-- PIX Card -->
+        <div class="bg-[#F8F9FA] p-8 md:p-10 rounded-4xl border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 group">
+          <div class="w-16 h-16 rounded-2xl bg-[#32BCAD]/10 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform duration-500">
+            <img src="https://img.icons8.com/color/512/pix.png" alt="Pix Logo" class="w-12 h-12 object-contain">
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="supp-pix-t">Doação via PIX</h3>
+          <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="supp-pix-p">A forma mais rápida de ajudar. O valor cai na hora na conta oficial da organização.</p>
+          <div class="bg-white p-6 rounded-3xl border border-gray-100 mb-8 relative">
+            <span class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Chave CNPJ</span>
+            <code class="block text-lg font-bold text-brand-purple select-all" id="pix-key" data-i18n="supp-pix-key">52.911.460/0001-75</code>
+            <button onclick="copyPixKey()" class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-brand-purple/5 text-brand-purple hover:bg-brand-purple hover:text-white transition-all flex items-center justify-center shadow-sm">
+              <i class="ph-bold ph-copy"></i>
+            </button>
+          </div>
+          <button onclick="copyPixKey()" class="w-full bg-gray-900 text-white hover:bg-brand-purple py-4 rounded-2xl font-bold text-lg transition-all shadow-lg flex items-center justify-center gap-2" data-i18n-btn="supp-pix-btn">
+            Copiar Chave PIX <i class="ph-bold ph-check-circle opacity-0 transition-opacity"></i>
+          </button>
+        </div>
+
+        <!-- Rouanet Card -->
+        <div class="bg-white p-8 md:p-10 rounded-4xl border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/10 rounded-full blur-[40px] -mr-16 -mt-16"></div>
+          <div class="w-16 h-16 rounded-2xl bg-brand-purple/10 text-brand-purple flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
+            <i class="ph-duotone ph-bank"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="supp-rouanet-t">Incentivo Fiscal (PRONAC)</h3>
+          <p class="text-gray-600 mb-8 font-medium leading-relaxed" data-i18n="supp-rouanet-p">Deduzir até 6% do seu IR devido. Use os dados abaixo para o depósito identificado.</p>
+          <div class="space-y-3 bg-gray-50 p-6 rounded-3xl border border-gray-100 mb-6">
+            <div class="flex justify-between text-sm py-1 border-b border-gray-200"><span class="text-gray-400 font-medium">PRONAC</span> <span class="font-bold text-brand-purple">260346</span></div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-200"><span class="text-gray-400 font-medium">Banco</span> <span class="font-bold text-gray-700">Banco do Brasil - 001</span></div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-200"><span class="text-gray-400 font-medium">Agência</span> <span class="font-bold text-gray-700">2814-2</span></div>
+            <div class="flex justify-between text-sm py-1"><span class="text-gray-400 font-medium">Conta</span> <span class="font-bold text-gray-700">69.464-9</span></div>
+          </div>
+          <a href="https://versalic.cultura.gov.br/#/projetos/260346" target="_blank" class="w-full bg-brand-purple/10 text-brand-purple hover:bg-brand-purple hover:text-white py-3 rounded-2xl font-bold text-sm transition-all flex items-center justify-center gap-2 border border-brand-purple/20">
+            <span data-i18n="supp-bank-dou-btn">Ver Detalhes do Projeto</span> <i class="ph ph-arrow-square-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Condensed) -->
+  <section id="faq" class="py-24 px-6 bg-gray-50 overflow-hidden">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 text-center mb-16" data-i18n="faq-h2">Dúvidas Comuns</h2>
+      <div class="space-y-4">
+        <details class="group bg-white rounded-3xl shadow-sm border border-gray-100 open:shadow-xl transition-all duration-300">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-xl text-gray-900">
+            <span data-i18n="doe-faq-q1">Minha doação é segura?</span>
+            <span class="transition group-open:rotate-180 text-brand-purple bg-brand-purple/10 rounded-full p-2"><i class="ph-bold ph-caret-down"></i></span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6" data-i18n="doe-faq-a1">Sim. Todas as transações são feitas diretamente para o CNPJ oficial da MedAffection e prestamos contas em nosso site.</div>
+        </details>
+        <details class="group bg-white rounded-3xl shadow-sm border border-gray-100 open:shadow-xl transition-all duration-300">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-xl text-gray-900">
+            <span data-i18n="doe-faq-q2">Recebo recibo da doação?</span>
+            <span class="transition group-open:rotate-180 text-brand-purple bg-brand-purple/10 rounded-full p-2"><i class="ph-bold ph-caret-down"></i></span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6" data-i18n="doe-faq-a2">Para doações via Lei Rouanet, o recibo é emitido pelo Ministério da Cultura. Para PIX, você pode solicitar via e-mail.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-white/80 py-16 px-6 relative border-t border-white/5 overflow-hidden">
+    <div class="absolute inset-0 bg-black mix-blend-overlay opacity-5 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-sm relative z-10">
+      <div class="flex flex-col gap-4">
+        <h4 class="text-2xl font-bold text-white mb-2">MedAffection</h4>
+        <p class="text-white/60 leading-relaxed max-w-sm" data-i18n="foot-desc">Transformando o tratamento do câncer infantil com empatia, tecnologia e imaginação.</p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-lg font-bold text-white mb-2">Contato</h4>
+        <a href="mailto:contato@medaffection.com" class="hover:text-white transition-colors flex items-center gap-2 text-white/60 mb-1"><i class="ph-bold ph-envelope-simple text-brand-coral"></i> contato@medaffection.com</a>
+        <a href="https://www.instagram.com/medaffection_/" target="_blank" class="hover:text-brand-purple transition-colors flex items-center gap-2 text-white/60"><i class="ph-bold ph-instagram-logo text-brand-purple"></i> @medaffection_</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-lg font-bold text-white mb-2" data-i18n="foot-links">Links rápidos</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="hover:text-brand-purple transition-colors">Início</a></li>
+          <li><a href="sobre.html" class="hover:text-brand-purple transition-colors">Sobre Nós</a></li>
+          <li><a href="index.html#faq" class="hover:text-brand-purple transition-colors">FAQ Principal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/10 text-center text-white/40 text-xs font-medium relative z-10 w-full flex flex-col items-center justify-center max-w-7xl mx-auto space-y-2">
+      <span class="opacity-75">&#169; 2025 MedAffection.</span> <span data-i18n="foot-rights" class="opacity-75">Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+  <script>
+    // Local script for video interaction
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('inst-video');
+      const overlay = document.getElementById('video-overlay');
+      
+      if(overlay && video) {
+        overlay.addEventListener('click', () => {
+          overlay.classList.add('hidden');
+          video.play();
+          video.controls = true;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
