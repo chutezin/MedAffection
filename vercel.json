@@ -1,4 +1,15 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "doe.medaffection.com"
+        }
+      ],
+      "destination": "/doe"
+    }
+  ]
 }
