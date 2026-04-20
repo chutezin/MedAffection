@@ -1,15 +1,23 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/doe",
+      "destination": "https://doe.medaffection.com",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
-      "source": "/",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "doe.medaffection.com"
         }
       ],
-      "destination": "/doe"
+      "destination": "/doe.html"
     }
   ]
 }
+
