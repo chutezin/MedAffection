@@ -3,6 +3,23 @@
   "redirects": [
     {
       "source": "/doe",
+      "has": [
+        {
+          "type": "host",
+          "value": "medaffection.com"
+        }
+      ],
+      "destination": "https://doe.medaffection.com",
+      "permanent": false
+    },
+    {
+      "source": "/doe",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.medaffection.com"
+        }
+      ],
       "destination": "https://doe.medaffection.com",
       "permanent": false
     }
@@ -20,4 +37,5 @@
     }
   ]
 }
+
 
